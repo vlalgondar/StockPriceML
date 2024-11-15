@@ -10,10 +10,11 @@ def train_model(x_train, y_train):
     model.add(Dense(1))
     
     model.compile(optimizer='adam', loss='mean_squared_error')
+    
     model.fit(x_train, y_train, epochs=10, batch_size=32)
     
-    # Save the model
     model.save('models/stock_prediction_model.h5')
+
     print("Model saved to models/stock_prediction_model.h5")
 
 if __name__ == "__main__":

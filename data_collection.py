@@ -10,11 +10,12 @@ def download_stock_data(ticker, start_date, end_date):
 
 if __name__ == "__main__":
     import os
-    # Create data directory if it doesn't exist
+    
     if not os.path.exists('data'):
         os.makedirs('data')
+
     # Parameters
-    ticker = 'AAPL'  # You can change this to any ticker symbol
+    ticker = 'AAPL'  
     start_date = '2010-01-01'
     end_date = '2023-10-01'
     download_stock_data(ticker, start_date, end_date)
