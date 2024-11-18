@@ -34,9 +34,10 @@ def preprocess_data(file_path):
 
 if __name__ == "__main__":
     x_train, y_train, scaler = preprocess_data('data/AAPL_data.csv')
-    # Save the scaler for future use
+    
     import joblib
     joblib.dump(scaler, 'models/scaler.save')
+    
     # Save preprocessed data
     np.save('data/x_train.npy', x_train)
     np.save('data/y_train.npy', y_train)
