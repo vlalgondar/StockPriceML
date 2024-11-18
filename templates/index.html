@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stock Prediction</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>Stock Price Prediction</h1>
+    <div id="graph"></div>
+    <script>
+        var graphs = JSON.parse('{{ graphJSON | safe }}');
+        Plotly.newPlot('graph', graphs.data, graphs.layout);
+    </script>
+</body>
+</html>
