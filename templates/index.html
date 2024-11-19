@@ -6,6 +6,14 @@
 </head>
 <body>
     <h1>Stock Price Prediction</h1>
+    {% if error %}
+        <p style="color:red;">{{ error }}</p>
+    {% endif %}
+    <form method="post">
+        <label for="ticker">Ticker Symbol:</label>
+        <input type="text" id="ticker" name="ticker" value="{{ ticker }}">
+        <input type="submit" value="Predict">
+    </form>
     <div id="graph"></div>
     <script>
         var graphs = JSON.parse('{{ graphJSON | safe }}');
